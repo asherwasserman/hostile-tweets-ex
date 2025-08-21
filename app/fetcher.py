@@ -10,5 +10,5 @@ class Dal:
         self.coll = self.db[self.collections[0]]
 
     def get_all_data(self):
-        return list(self.coll.find({},{}))
+        return pd.DataFrame(list(self.coll.find({},{})))
 
